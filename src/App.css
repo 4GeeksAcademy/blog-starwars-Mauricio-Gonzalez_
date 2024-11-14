@@ -1,38 +1,263 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* General Styles */
+body {
+  background-color: #f8f9fa;
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.favorites-button {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.favorites-button span {
+  background-color: gray;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  margin-left: 8px;
+}
+
+/* Scroll */
+.scroll-container {
+  display: flex;
+  gap: 15px;
+  padding: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 4px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+.card {
+  flex: 0 0 auto;
+  width: 400px;
+  
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  scroll-snap-align: start;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.btn-learn-more {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-learn-more:hover {
+  background-color: #0056b3;
+}
+
+/* Favoritos Button Styles */
+.favoritos-button.personaje,
+.favoritos-button.vehiculo,
+.favoritos-button.planeta {
+  background-color: white;
+  border: 2px solid #f3b711;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.favoritos-button.personaje .fa-heart,
+.favoritos-button.vehiculo .fa-heart,
+.favoritos-button.planeta .fa-heart {
+  color: #f3b711;
+}
+
+/* Hover */
+.favoritos-button.personaje:hover,
+.favoritos-button.vehiculo:hover,
+.favoritos-button.planeta:hover {
+  background-color: #f3b711;
+  border: 2px solid white;
+}
+
+.favoritos-button.personaje:hover .fa-heart,
+.favoritos-button.vehiculo:hover .fa-heart,
+.favoritos-button.planeta:hover .fa-heart {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Cuando está en favoritos */
+.favoritos-button.personaje.favorited,
+.favoritos-button.vehiculo.favorited,
+.favoritos-button.planeta.favorited {
+  background-color: #f3b711;
+  border: 2px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.favoritos-button.personaje.favorited .fa-heart,
+.favoritos-button.vehiculo.favorited .fa-heart,
+.favoritos-button.planeta.favorited .fa-heart {
+  color: red;
+}
+
+/* Character Detail Styles */
+.details-container {
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.details-container img {
+  width: 800px;
+  height: 600px;
+  object-fit: cover;
+}
+
+.details-info {
+  flex: 1;
+}
+
+.details-info h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.details-info p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.5;
+}
+
+.details-stats {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  color: #dc3545;
+  margin-top: 30px;
+  border-top: 2px solid #dc3545;
+  padding-top: 20px;
+}
+
+.details-stats div h5 {
+  font-size: 1em;
+  color: #dc3545;
+}
+
+.details-stats div p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* Dropdown for Favorites */
+.dropdown-menu {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.favorites-button {
+  margin-left: auto;
+}
+
+.favorites-dropdown {
+  position: relative;
+  left: -20px;
+  z-index: 1000;
+}
+
+.favorites-dropdown .dropdown-menu {
+  position: absolute;
+  left: -30px; /* Ajusta el valor para moverlo más a la izquierda */
+  z-index: 1050;
+}
+
+.header-favorites-button {
+  position: relative;
+  left: -20px;
+}
+
+
+.section-title {
+  font-size: 36px; /* Aumenta el tamaño de la fuente */
+  color: #dc3545; /* Rojo */
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-align: left; /* Alineación a la izquierda */
+  padding-left: 20px; /* Ajuste para separarlo un poco del borde */
 }

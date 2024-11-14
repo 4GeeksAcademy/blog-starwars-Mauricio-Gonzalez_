@@ -1,0 +1,29 @@
+/* Archivo: styles.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .scroll-container {
+    overflow-x: auto;
+    display: flex;
+    padding: 20px;
+    height: 700px;
+  }
+  
+  .card {
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-img-top {
+    height: 200px;
+    width: 400px;
+    object-fit: cover;
+  }

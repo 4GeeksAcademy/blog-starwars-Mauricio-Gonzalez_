@@ -1,0 +1,47 @@
+const Personajes = () => {
+  const personajes = [
+    { id: 1, name: 'Luke Skywalker', gender: 'male', hairColor: 'blond', eyeColor: 'blue', image: 'https://starwars-visualguide.com/assets/img/characters/1.jpg' },
+    { id: 2, name: 'Darth Vader', gender: 'male', hairColor: 'none', eyeColor: 'yellow', image: 'https://starwars-visualguide.com/assets/img/characters/4.jpg' },
+    { id: 3, name: 'Leia Organa', gender: 'female', hairColor: 'brown', eyeColor: 'brown', image: 'https://starwars-visualguide.com/assets/img/characters/5.jpg' },
+    { id: 4, name: 'Han Solo', gender: 'male', hairColor: 'brown', eyeColor: 'brown', image: 'https://starwars-visualguide.com/assets/img/characters/14.jpg' },
+    { id: 5, name: 'Yoda', gender: 'male', hairColor: 'white', eyeColor: 'green', image: 'https://starwars-visualguide.com/assets/img/characters/20.jpg' },
+    { id: 6, name: 'Chewbacca', gender: 'male', hairColor: 'brown', eyeColor: 'blue', image: 'https://starwars-visualguide.com/assets/img/characters/13.jpg' },
+    { id: 7, name: 'R2-D2', gender: 'n/a', hairColor: 'n/a', eyeColor: 'red', image: 'https://starwars-visualguide.com/assets/img/characters/3.jpg' },
+    { id: 8, name: 'C-3PO', gender: 'n/a', hairColor: 'n/a', eyeColor: 'yellow', image: 'https://starwars-visualguide.com/assets/img/characters/2.jpg' },
+    { id: 9, name: 'Obi-Wan Kenobi', gender: 'male', hairColor: 'auburn', eyeColor: 'blue-gray', image: 'https://starwars-visualguide.com/assets/img/characters/10.jpg' },
+  ];
+
+
+
+
+
+const Planetas = () => {
+  const planetas = [
+    { id: 2, name: 'Alderaan', climate: 'temperate', population: '2000000000', image: 'https://starwars-visualguide.com/assets/img/planets/2.jpg' },
+    { id: 3, name: 'Yavin IV', climate: 'temperate, tropical', population: '1000', image: 'https://starwars-visualguide.com/assets/img/planets/3.jpg' },
+    { id: 4, name: 'Hoth', climate: 'frozen', population: 'unknown', image: 'https://starwars-visualguide.com/assets/img/planets/4.jpg' },
+    { id: 5, name: 'Dagobah', climate: 'murky', population: 'unknown', image: 'https://starwars-visualguide.com/assets/img/planets/5.jpg' },
+    { id: 6, name: 'Bespin', climate: 'temperate', population: '6000000', image: 'https://starwars-visualguide.com/assets/img/planets/6.jpg' },
+    { id: 7, name: 'Endor', climate: 'temperate', population: '30000000', image: 'https://starwars-visualguide.com/assets/img/planets/7.jpg' },
+    { id: 8, name: 'Naboo', climate: 'temperate', population: '4500000000', image: 'https://starwars-visualguide.com/assets/img/planets/8.jpg' },
+    { id: 9, name: 'Coruscant', climate: 'temperate', population: '1000000000000', image: 'https://starwars-visualguide.com/assets/img/planets/9.jpg' },
+    { id: 10, name: 'Kamino', climate: 'temperate', population: '1000000000', image: 'https://starwars-visualguide.com/assets/img/planets/10.jpg' },
+  ];
+
+
+
+    const vehiculos = [
+    { id: 4, name: 'Sand Crawler', model: 'Digger Crawler', manufacturer: 'Corellia Mining Corporation', image: 'https://starwars-visualguide.com/assets/img/vehicles/4.jpg' },
+    { id: 6, name: 'T-16 skyhopper', model: 'T-16 skyhopper', manufacturer: 'Incom Corporation', image: 'https://starwars-visualguide.com/assets/img/vehicles/6.jpg' },
+    { id: 7, name: 'X-34 landspeeder', model: 'X-34 landspeeder', manufacturer: 'SoroSuub Corporation', image: 'https://starwars-visualguide.com/assets/img/vehicles/7.jpg' },
+    { id: 8, name: 'TIE/LN starfighter', model: 'Twin Ion Engine/Ln Starfighter', manufacturer: 'Sienar Fleet Systems', image: 'https://starwars-visualguide.com/assets/img/vehicles/8.jpg' },
+    { id: 14, name: 'Snowspeeder', model: 't-47 airspeeder', manufacturer: 'Incom corporation', image: 'https://starwars-visualguide.com/assets/img/vehicles/14.jpg' },
+    { id: 16, name: 'TIE bomber', model: 'TIE/sa bomber', manufacturer: 'Sienar Fleet Systems', image: 'https://starwars-visualguide.com/assets/img/vehicles/16.jpg' },
+    { id: 18, name: 'AT-AT', model: 'All Terrain Armored Transport', manufacturer: 'Kuat Drive Yards, Imperial Department of Military Research', image: 'https://starwars-visualguide.com/assets/img/vehicles/18.jpg' },
+    { id: 19, name: 'AT-ST', model: 'All Terrain Scout Transport', manufacturer: 'Kuat Drive Yards, Imperial Department of Military Research', image: 'https://starwars-visualguide.com/assets/img/vehicles/19.jpg' },
+    { id: 20, name: 'Storm IV Twin-Pod cloud car', model: 'Storm IV Twin-Pod', manufacturer: 'Bespin Motors', image: 'https://starwars-visualguide.com/assets/img/vehicles/20.jpg' },
+    { id: 24, name: 'Sail barge', model: 'Modified Luxury Sail Barge', manufacturer: 'Ubrikkian Industries Custom Vehicle Division', image: 'https://starwars-visualguide.com/assets/img/vehicles/24.jpg' },
+    // Puedes agregar más vehículos si es necesario
+  ];
+
+
